@@ -49,10 +49,4 @@ Dashboard
 
 [Watch a Demo Video](#) - (Replace # with the link to your demo video)
 
-## Contributing
 
-Feel free to contribute to the project by opening issues or pull requests. Any improvements or suggestions are welcome!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
