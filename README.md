@@ -32,6 +32,9 @@
 Dashboard
 ![Screenshot (329)](https://github.com/rk28284/RoadSafatyDetectorsystem/assets/112754760/ac44a4ce-287e-4fe3-9c9a-a4f3dc8ed7e1)
 
+Driver Smoking Detected
+<img width="955" alt="Screenshot 2023-11-11 234941" src="https://github.com/rk28284/RoadSafatyDetectorsystem/assets/112754760/72c129de-a686-4ee0-820a-329e23b7214f">
+
 
 ## How to Run
 
