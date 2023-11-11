@@ -1,10 +1,12 @@
-# Road Safety Detector System
 
-![Background Image](https://cdni.autocarindia.com/utils/imageresizer.ashx?n=http://img.haymarketsac.in/autocarpro/44f88b68-6fb4-4ea6-a5b2-3400d44cfe13.png&w=750&h=490&q=75&c=1)
+<h1 align="center">Road Safety Detector System</h1>
 
 ## Overview
+<h2> The Road Safety Detector System is an automated solution that utilizes Google Teachable Machine for real-time detection of smoking and whether the driver is wearing a helmet. This project is implemented using HTML, CSS, and JavaScript.</h2>  
 
-The Road Safety Detector System is an automated solution that utilizes Google Teachable Machine for real-time detection of smoking and whether the driver is wearing a helmet. This project is implemented using HTML, CSS, and JavaScript.
+
+
+
 
 ## Features
 
