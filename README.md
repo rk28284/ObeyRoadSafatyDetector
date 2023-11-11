@@ -29,6 +29,10 @@
 - JavaScript
 - [Google Teachable Machine](https://teachablemachine.withgoogle.com/)
 
+Dashboard
+![Screenshot (329)](https://github.com/rk28284/RoadSafatyDetectorsystem/assets/112754760/ac44a4ce-287e-4fe3-9c9a-a4f3dc8ed7e1)
+
+
 ## How to Run
 
 1. Clone the repository:
