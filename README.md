@@ -1,6 +1,8 @@
 
 <h1 align="center">Road Safety Detector System</h1>
 
+![Screenshot (328)](https://github.com/rk28284/RoadSafatyDetectorsystem/assets/112754760/6fa0ab56-b0dd-4522-be1a-1d8bd3c9a701)
+
 ## Overview
 <h2> The Road Safety Detector System is an automated solution that utilizes Google Teachable Machine for real-time detection of smoking and whether the driver is wearing a helmet. This project is implemented using HTML, CSS, and JavaScript.</h2>  
 
