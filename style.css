@@ -1,0 +1,66 @@
+body {
+    background: url('https://cdni.autocarindia.com/utils/imageresizer.ashx?n=http://img.haymarketsac.in/autocarpro/44f88b68-6fb4-4ea6-a5b2-3400d44cfe13.png&w=750&h=490&q=75&c=1');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh; /* Set body height to full viewport height */
+}
+
+#webcam-container {
+    position: relative;
+    margin-top: 20px;
+    border: 4px solid #333;
+    border-radius: 10px;
+    overflow: hidden; /* Make sure the webcam doesn't overflow the container */
+    width: 15%; /* Make the webcam container take the full width */
+    height: 33vh; /* Set a fixed height for the webcam container */
+}
+
+#webcam-container video {
+    width: 50%; /* Make the video take the full width of the container */
+    height: 50%;
+    border-radius: 6px;
+}
+
+#label-container {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color: white; /* Set text color to white for better visibility on the image */
+}
+
+.green-text {
+    color: green;
+    background-color: white;
+}
+
+.red-text {
+    color: red;
+    background-color: white;
+}
+
+#button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}

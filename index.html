@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Safety Detector System</title>
+    <link rel="stylesheet" href="./style.css">
+<body>
+    <h1 style="color:red;">Road Safety Detector System</h1>
+    <h4 style="color: rgb(75, 0, 128);">Its a Automated System which help to detect driver wear Hemlet and Smoking or not</h4>
+    <button id="button" type="button" onclick="init()">Start</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        const URL = "https://teachablemachine.withgoogle.com/models/cKqtu60Fy/";
+        let model, webcam, labelContainer, maxPredictions;
+
+        async function init() {
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+
+            const flip = true;
+            webcam = new tmImage.Webcam(200, 200, flip);
+            await webcam.setup();
+            await webcam.play();
+            window.requestAnimationFrame(loop);
+
+            document.getElementById("webcam-container").appendChild(webcam.canvas);
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                labelContainer.appendChild(document.createElement("div"));
+            }
+        }
+
+        async function loop() {
+            webcam.update();
+            await predict();
+            window.requestAnimationFrame(loop);
+        }
+
+        async function predict() {
+            const prediction = await model.predict(webcam.canvas);
+            let isWearingHelmet = prediction[0].probability.toFixed(2);
+            let isSmoking = prediction[1].probability.toFixed(2);
+
+            if (isWearingHelmet >= 0.8) {
+                setLabel("Driver wears helmet,You Are Responsible Citizen", 'green-text');
+            } else if(isWearingHelmet < 0.8) {
+                setLabel("Driver does not wear helmet, Fined Rupees 2000", 'red-text');
+            }
+
+            if (isSmoking >= 1) {
+                setLabel("Driver is smoking,Fined Rupees 10000", 'red-text');
+            } else{
+                setLabel("Always Follow Road safety","green-text")
+            }
+        }
+
+        function setLabel(text, className) {
+            labelContainer.innerHTML = `<div class="${className}">${text}</div>`;
+        }
+    </script>
+</body>
+
+</html>
